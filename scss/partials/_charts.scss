@@ -1,0 +1,50 @@
+main {    
+     
+    
+        .charts {
+            width: 100%;
+            margin-top:225px; 
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex-direction: row;
+        
+
+        }
+        .chartPage {
+             margin: 0 auto;
+             margin: 30px 10px 50px 10px;
+             background-color: $backgroundColor;
+             width: 300px;
+             padding: 30px;
+
+            .close {
+                float: right;
+                margin-top: -10px;
+                color: $pink;
+                opacity: 0.2;
+                font-size: $bodySubheader;      
+                
+                &:hover, &:active {
+                    opacity: 1;
+                    cursor: pointer;
+            }
+            
+            }
+     
+            &:after {
+                content: ' ';
+                display: block;
+                float: none;
+                clear: both;
+            }
+            
+            h2 {
+                font-family: $mainFont;
+                padding-bottom: 30px;
+                font-size: $bodySubheader;
+                color: $blue;
+
+            }
+    }
+}

@@ -1,0 +1,74 @@
+main {
+    .table {
+        width: 93%;
+        margin-bottom: 45px;
+//        background-color: #ffffff;
+        
+        @include medium {
+                width: 380px;
+           
+            }   
+        
+        @include small {
+                width: 360px;
+           
+            }
+            
+            .close {
+                float: right;
+                padding: 20px;
+                color: $pink;
+                opacity: 0.2;
+                font-size: $bodySubheader;
+                
+                &:hover, &:active {
+                    opacity: 1;
+                    cursor: pointer;
+            }
+            }
+            
+            &:after {
+                content: ' ';
+                display: block;
+                float: none;
+                clear: both;
+            }
+        
+            h2 {
+                font-family: $mainFont;
+                padding-bottom: 30px;
+                font-size: $bodyHeader;
+                color: $blue;
+                padding: 30px 30px 0 30px;
+            }
+
+            hr {
+                border: 1px dashed $blue;
+            }
+
+            table {
+                text-align: center;
+                width: 100%;
+            td, th {
+                padding: 10px;
+                border-bottom: 1px solid rgba(255,99,132,1);
+                background-color: rgba(255, 99, 132, 0.2);
+                }
+
+            th {
+                font-family: $mainFont;
+                font-size: $bodySubheader;
+                font-weight: 700;
+                color: $blue;
+                background-color: $backgroundColor;
+                }
+
+            td {
+                font-family: $mainFont;
+                font-size: $fontSizeSmall;
+                color: $greyFont;
+                }
+            }
+    }
+
+}

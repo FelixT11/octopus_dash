@@ -1,0 +1,30 @@
+main .sideBarMenu {
+  width: 20%;
+  height: 100%;
+  background: #325680;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#333544, #325680);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#333544, #325680);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#333544, #325680);
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#333544), to(#325680));
+  background: linear-gradient(#333544, #325680);
+  /* Standard syntax */
+  position: fixed;
+  left: 0;
+  top: 0; }
+  main .sideBarMenu ul li {
+    padding: 15px 0;
+    padding-left: 5%; }
+    main .sideBarMenu ul li i {
+      color: #ffffff;
+      font-size: 20px;
+      padding: 0 30px 0 10px; }
+    main .sideBarMenu ul li a {
+      font-family: 'Oxygen', sans-serif;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 24px; }

@@ -1,0 +1,182 @@
+// SIDE NAVBAR
+
+#colorBtn {
+    cursor: pointer;
+    width: 200px;
+    color: $color;
+    font-family: $mainFont;
+    font-size: 18px;
+    background-color: $blue;
+    padding: 10px;
+    border: none;
+    
+    &:hover, &:active {
+        background-color: $lightBlue;
+    }
+}
+
+#rastaBtn {
+    cursor: pointer;
+    width: 200px;
+    color: #ebc805;
+    font-family: $mainFont;
+    font-size: 18px;
+    background-color: rgba(209, 75, 75, 1);
+    padding: 10px;
+    border: none;
+    border: none;
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(0,235,255,1));
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+    animation: blinker 2.5s linear infinite;
+    -webkit-filter: drop-shadow(0px 0px 20px rgba(209, 75, 75, 1));
+
+@keyframes blinker{
+    
+    50% {opacity:0.2;}
+}
+    
+    &:hover, &:active {
+        background-color: rgb(155, 39, 39);
+    }
+}
+
+a
+{
+  text-decoration: none;
+  color: $color;
+  font-family: $mainFont;
+  transition: color 0.3s ease;
+   
+}
+
+a:hover
+{
+  color: $blue;
+}
+
+li:hover  #menuIcon {
+    opacity: 1;
+}
+
+#menuIcon{
+    padding-right: 20px;
+    color: $blue;
+    opacity: 0.4;
+}
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
+
+  top: 50px;
+  left: 50px;
+ 
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: fixed;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  height: 100%; 
+  width: 200px;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  background: #325680;
+        background: -webkit-linear-gradient($BGdarkBlue, $BGlightDarkBlue); 
+        background: -o-linear-gradient($BGdarkBlue, $BGlightDarkBlue); 
+        background: -moz-linear-gradient($BGdarkBlue, $BGlightDarkBlue); 
+        background: linear-gradient($BGdarkBlue, $BGlightDarkBlue); 
+}
+
+#menu li
+{
+  padding: 20px 0;
+  font-size: $bodyHeader;
+   
+}
+
+
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}

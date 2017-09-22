@@ -1,0 +1,19 @@
+// FOR RESPONS
+
+@mixin large {
+  @media only screen and (min-width:1154px) and (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width:641px) and (max-width: 1154px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and (min-width:0px) and  (max-width: 640px) {
+    @content;
+  }
+}

@@ -1,0 +1,314 @@
+// MESSAGES DOC
+
+main {
+    
+    .right {
+        padding: 0;
+        margin: 0;
+        position: relative;
+	    top:180px;
+        float: right;
+        width: 40%;
+        height: 631px;
+        overflow: scroll;
+        background-color: $blue;
+           
+            @include small {
+                    
+                width: 100%;
+                float: none;
+                }
+        
+        &:after {
+            content: '';
+            display: block;
+            float: none;
+            clear: both;
+        }
+        
+        h2 {
+            height:40px;
+            background-color:$blue;
+            color:$color;
+            size:12px;
+            line-height:40px;
+            font-family:$mainFont;
+            text-align:center;
+            padding-right:15px;
+        }
+        
+        div {
+            cursor: pointer;
+            
+            &:hover, &:active {
+                background-color: $lightBlue;
+            }
+            
+            ul {
+                width: 100%;
+                box-sizing: border-box;
+                
+                li {
+
+                    img, h4, p {
+                        float: left;
+
+                        &:after {
+                            content: '';
+                            display: block;
+                            float: none;
+                            clear: both;
+                        }
+                    }
+
+                    img {
+                        border-radius: $percentBorderRadius;
+                        width: 20%;
+                        box-sizing: border-box;
+                        padding: 10px;
+                        
+
+                            @include medium {
+
+                                padding: 5px;
+                                }   
+                    }
+
+                    h4 {
+                        font-family: $mainFont;
+                        color: $color;
+                        font-size: $bodySubheader;
+                        width: 80%;
+                        box-sizing: border-box;
+                        padding: 10px;
+                    }
+
+                    p {
+                        
+                        font-family: $mainFont;
+                        color: black;
+                        font-size: $fontSizeSmall; 
+                        padding: 10px;
+                        
+                           @include medium {
+
+                                padding: 0;
+                                padding-bottom: 5px;
+                                padding-left: 10px;
+                                }   
+                    }
+                }
+            }
+
+            hr {
+                border: 0;
+                height: 1px;
+                width: 100%;
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+            }
+        } 
+    }
+}
+
+
+
+
+
+
+form {
+	margin:0;
+	padding:0;
+	overflow:hidden;
+    background-color: $blue;
+}
+
+body {
+	margin:0;
+	padding:20px 0;
+	background-color:$BGcolor;
+}
+
+#content {
+	position: relative;
+	top:180px;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+#windowChat {
+	position:relative;
+	width:60%;
+    float: left;
+	border-radius:3px;
+                   
+            @include small {
+                    
+                width: 100%;
+                float: none;
+                }
+    
+        &:after {
+            content: '';
+            display: block;
+            float: none;
+            clear: both;
+        }
+}
+
+header {
+	height:40px;
+	background-color:$blue;
+	color:$color;
+	size:12px;
+	line-height:40px;
+	font-family:$mainFont;
+	text-align:center;
+	padding-right:15px;
+}
+
+footer {
+	position:absolute;
+	height:50px;
+	width:100%;
+	bottom:-50px;
+	text-align:center;
+	box-sizing:border-box;
+}
+
+input {
+	height:50px;
+	font-size:$bodySubheader;
+	background:$color;
+	border:1px solid #CCCCCC;
+	margin:0;
+	outline:none;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	width:60%;
+	padding-left:5px;
+}
+
+input[type=submit] {
+	position:relative;
+	top:0px;
+	width:100px;
+    font-family: $mainFont;
+	background-color:$color;
+	color:$chatFont;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+    &:hover, &:active {
+        background-color:$green;
+        cursor: pointer;
+    }
+}
+
+.msg {
+    line-height: 25px;
+	position:relative;
+	height:50px;
+	width:295px;
+	font-size:$fontSizeSmall;
+	font-family:$mainFont;
+    color: $blue;
+	background-color: $speechbubbleColor;
+	border-radius:10px;
+	margin-top:10px;
+	padding:5px;
+    padding-left: 20px
+}
+.self .msg::after {
+   content:"";
+   position: absolute;
+   right:-8px;
+   top: 10px;
+   width: 0;
+   height: 0;
+   border: 5px solid $speechbubbleColor;
+   border-right-color:transparent;
+   border-bottom-color:transparent;
+}
+
+.other .msg::after {
+   content:"";
+   position: absolute;
+   left: -8px;
+   top: 10px;
+   width: 0;
+   height: 0;
+   border: 5px solid $speechbubbleColor;
+   border-left-color:transparent;
+   border-bottom-color:transparent;
+}
+
+//.self .pic::after {
+//	box-shadow: 1px 1px 2px rgba(black, 0.2);
+//}
+
+.self .pic {
+	float:right;
+}
+.other .pic {
+	float:left;
+}
+.self .msg {
+	float:left;
+}
+.other .msg {
+	float:right;
+}
+
+.pic {
+     border-radius: $percentBorderRadius;   
+	 width:70px; 
+	 height:70px;
+	 margin: 5px;
+	 background-repeat:no-repeat;
+}
+
+.pic img {
+	width:100%;
+	display:block;
+}
+
+//#windowChat {
+//	background-color:#F0F0F0;
+//}
+
+#chatroom {
+    background: $blue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($BGdarkBlue, $BGlightDarkBlue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($BGdarkBlue, $BGlightDarkBlue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($BGdarkBlue, $BGlightDarkBlue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($BGdarkBlue, $BGlightDarkBlue); /* Standard syntax */
+	padding:5px;
+	height:510px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	box-sizing:border-box;
+}
+
+#chatroom li {
+	list-style:none;
+}
+
+.self, .other {
+	clear:both;
+}
+
+.date {
+    font-family: $mainFont; 
+    width:100%;
+	height:12px;
+	line-height:12px;
+	text-align:center;
+	clear:both;
+	font-size:10px;
+	color: $color;
+}
