@@ -53,7 +53,7 @@ $('#rastaBtn').click(function () {
         
     } else {
         
-        alert("Don't take me serious, I am just the Rasta Mode! Watch me hight and the design will be alright.");
+        alert("Don't take me seriously, I am just the Rasta Mode! Watch me while you are high and the design will be alright.");
         
         $('#audio').trigger("play");
         $("#colorBtn").hide();
